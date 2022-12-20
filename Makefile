@@ -1,7 +1,6 @@
 install:
 	pip install --upgrade pip &&\
-	pip install -r requirements.txt &&\
-	pip install e .
+	pip install -r requirements.txt
 format:
 	black *.py src/*.py tests/*.py
 lint:

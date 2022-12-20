@@ -32,6 +32,10 @@ jobs:
         make lint
 
     - name: Run the tests with pytest
-      run: | 
-        make tests
+      uses: pavelzw/pytest-action@v2
+      with: 
+        verbose: true
+
+      # run: | 
+      #   make tests
 
