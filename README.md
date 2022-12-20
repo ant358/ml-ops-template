@@ -2,6 +2,9 @@
 
 # ml-ops-template
 
+This is a template for a machine learning project.  It is designed to be used with a CI process to automate the testing and deployment of the project. It will be a base for NLP based projects deployed to a container microservice.
+
+The template was built using the following steps:
 ## First build out the project 
 Create the files and folders you need for your project.  This includes the following:
 Makefile
@@ -31,10 +34,11 @@ pip install -r requirements.txt
 or make install
 
 ## Start the CI process  
-push the changes so far to github or gitlab
+Push the changes so far to github or gitlab
 Then check that the requirements are installed correctly in the first stage of the CI process.
 Check the first step of the CI process is successful, (add the badge to the readme file.)
 Then add the formating and linting steps to the CI process.
+Test that they are working and detecting errors.
 
 ## Add some tests and test coverage stats
 Add some tests to the tests folder and run the tests with pytest
@@ -49,3 +53,5 @@ add a docker build step to the CI process
 ## run the docker image
 add a docker run step to the CI process
 
+## Run the docker image locally
+Check that you can connect to the API at http://localhost:8000/docs or the endpoints directly from a terminal using curl http://localhost:8000/get_random_wiki_page 
