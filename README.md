@@ -34,3 +34,4 @@ or make install
 push the changes so far to github or gitlab
 Then check that the requirements are installed correctly in the first stage of the CI process.
 Check the first step of the CI process is successful, (add the badge to the readme file.)
+Then add the formating and linting steps to the CI process.
