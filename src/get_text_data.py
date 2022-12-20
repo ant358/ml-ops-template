@@ -24,8 +24,6 @@ def get_wiki(name="Monty Python", sentences=10) -> str:
         wiki = wikipedia.summary(name, sentences=sentences)
         print(e)
     return wiki
-
-
 def get_random_wiki_page(pages=1) -> list[str]:
     """Fetch a random wikipedia page
 
