@@ -4,7 +4,7 @@ install:
 format:
 	black *.py src/*.py tests/*.py
 lint:
-	flake8 -vv *.py src/*.py tests/*.py
+	flake8 -v *.py src/*.py tests/*.py
 tests:
 	python -m pytest -vv --cov tests/*.py
 build:

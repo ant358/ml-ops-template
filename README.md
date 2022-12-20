@@ -39,3 +39,5 @@ Then add the formating and linting steps to the CI process.
 ## Add some tests and test coverage stats
 Add some tests to the tests folder and run the tests with pytest
 Fail some tests to check the CI process fails
+add a pytest.ini file to the root of the project
+add a __init__.py file to the tests folder
