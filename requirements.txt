@@ -1,0 +1,6 @@
+flake8
+black
+pytest
+pytest-cov
+fire
+wikipedia
