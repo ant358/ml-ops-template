@@ -2,11 +2,11 @@ install:
 	pip install --upgrade pip &&\
 	pip install -r requirements.txt
 format:
-	black *.py src/*.py
+	black *.py src/*.py tests/*.py
 lint:
-	flake8 *.py src/*.py
+	flake8 *.py src/*.py tests/*.py
 tests:
-	python  -m pytest -vv --cov
+	python -m pytest -vv --cov
 build:
 	# build the container
 deploy:
