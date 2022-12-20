@@ -6,7 +6,9 @@ format:
 lint:
 	flake8 *.py src/*.py
 test:
-	# test the code
+	python  -m pytest -vv --cov
+build:
+	# build the container
 deploy:
 	# deploy the code
 all: install format lint test deploy
