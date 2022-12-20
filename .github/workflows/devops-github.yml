@@ -27,3 +27,6 @@ jobs:
 
     - name: Lint code with flake8
       run: make lint
+
+    - name: Run the tests with pytest
+      run: make tests
