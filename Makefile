@@ -16,5 +16,5 @@ build:
 	docker build -t fastapi-wiki .
 deploy:
 	# deploy the code
-	docker run -p -d 127.0.0.1:8080:8080 fastapi-wiki
+	docker run -d -p 8080:8080 fastapi-wiki
 all: install format lint test deploy
