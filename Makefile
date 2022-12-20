@@ -4,7 +4,7 @@ install:
 format:
 	black *.py src/*.py
 lint:
-	# lint the code
+	flake8 *.py src/*.py
 test:
 	# test the code
 deploy:
