@@ -4,9 +4,9 @@ install:
 format:
 	black *.py src/*.py tests/*.py
 lint:
-	flake8 *.py src/*.py tests/*.py
+	flake8 -vv *.py src/*.py tests/*.py
 tests:
-	pytest -vv --cov tests/
+	python -m pytest -vv --cov tests/*.py
 build:
 	# build the container
 deploy:
