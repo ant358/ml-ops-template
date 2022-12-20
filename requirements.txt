@@ -7,3 +7,5 @@ fire==0.5.0
 wikipedia==1.4.0
 numpy==1.24.0
 pandas==1.5.2
+fastapi==0.88.0
+uvicorn==0.20.0
