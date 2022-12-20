@@ -5,7 +5,7 @@ format:
 	black *.py src/*.py
 lint:
 	flake8 *.py src/*.py
-test:
+tests:
 	python  -m pytest -vv --cov
 build:
 	# build the container
