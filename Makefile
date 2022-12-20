@@ -14,7 +14,13 @@ test:
 build:
 	# build the container
 	docker build -t fastapi-wiki .
-deploy:
+run:
 	# deploy the code
-	docker run -d -p 8080:8080 fastapi-wiki
-all: install format lint test deploy
+	docker run --rm -d -p 8080:8080 --name fastapi-wiki-container fastapi-wiki
+deploy:
+	# customise to the cloud provider
+	build
+	run
+	push
+
+all: install format lint test build run deploy

@@ -41,3 +41,11 @@ Add some tests to the tests folder and run the tests with pytest
 Fail some tests to check the CI process fails
 add a pytest.ini file to the root of the project
 add a __init__.py file to the tests folder
+
+## Build the docker image
+write the dockerfile and 
+add a docker build step to the CI process
+
+## run the docker image
+add a docker run step to the CI process
+
