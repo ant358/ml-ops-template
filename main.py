@@ -1,7 +1,7 @@
 # note does not run in jupyter notebook, run in terminal
 from fastapi import FastAPI
 import uvicorn
-from src.get_text_data import get_wiki, get_random_wiki_page
+from src.get_text_data import get_wiki_page, get_random_wiki_page
 
 app = FastAPI()
 
@@ -11,20 +11,20 @@ async def root():
     return {"message": "Template ML API to work with text data"}
 
 
-@app.get("/wiki_summary/{page_name}")
-async def wiki_summary(page_name: str):
-    """Get the summary of a Wikipedia page"""
+@app.get("/wiki_page/{page_name}")
+async def wiki_page(page_name: str):
+    """Get the text content of a Wikipedia page"""
 
-    result = get_wiki(page_name)
-    return {"summary": result}
+    result = get_wiki_page(page_name)
+    return {"title": page_name, "content": result}
 
 
 @app.get("/random_wiki_page")
 async def random_wiki_page():
     """Get a random Wikipedia page summary"""
-
-    result = get_wiki(get_random_wiki_page()[0])
-    return {"summary": result}
+    page_title = get_random_wiki_page()[0]
+    result = get_wiki_page(page_title)
+    return {"title": page_title, "content": result}
 
 
 if __name__ == "__main__":

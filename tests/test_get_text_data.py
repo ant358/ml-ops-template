@@ -1,4 +1,4 @@
-from src.get_text_data import get_wiki, get_random_wiki_page
+from src.get_text_data import get_wiki, get_random_wiki_page, get_wiki_page
 
 
 def test_get_wiki():
@@ -7,3 +7,7 @@ def test_get_wiki():
 
 def test_get_random_wiki_page():
     assert len(get_random_wiki_page()) > 0
+
+
+def test_get_wiki_page():
+    assert len(get_wiki_page("Monty Python")) > 0
