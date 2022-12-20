@@ -7,7 +7,7 @@ lint:
 	flake8 -v *.py src/*.py tests/*.py
 tests:
 	# see pytest.ini for test configuration
-	pytest
+	python -m pytest
 build:
 	# build the container
 deploy:

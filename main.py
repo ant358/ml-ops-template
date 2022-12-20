@@ -31,4 +31,3 @@ if __name__ == "__main__":
     # goto localhost:8080/
     # or localhost:8080/docs for the interactive docs
     uvicorn.run(app, port=8080, host="0.0.0.0")
-
