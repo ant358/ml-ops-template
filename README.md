@@ -1,3 +1,5 @@
+[![Makefile CI process for Github](https://github.com/ant358/ml-ops-template/actions/workflows/devops-github.yml/badge.svg)](https://github.com/ant358/ml-ops-template/actions/workflows/devops-github.yml)
+
 # ml-ops-template
 
 ## First build out the project 
@@ -28,3 +30,7 @@ The first time you run the requirements it is worth removing the pinned version 
 pip install -r requirements.txt
 or make install
 
+# Start the CI process  
+push the changes so far to github or gitlab
+Then check that the requirements are installed correctly in the first stage of the CI process.
+Check the first step of the CI process is successful, (add the badge to the readme file.)

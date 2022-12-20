@@ -2,7 +2,7 @@ install:
 	pip install --upgrade pip &&\
 	pip install -r requirements.txt
 format:
-	# format the code
+	black *.py src/*.py
 lint:
 	# lint the code
 test:

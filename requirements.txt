@@ -1,6 +1,9 @@
-flake8
-black
-pytest
-pytest-cov
-fire
-wikipedia
+flake8==6.0.0
+black==22.12.0
+pytest==7.2.0
+pytest-cov==4.0.0
+ipykernel==6.19.3
+fire==0.5.0
+wikipedia==1.4.0
+numpy==1.24.0
+pandas==1.5.2
