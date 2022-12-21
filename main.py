@@ -1,7 +1,7 @@
 # note does not run in jupyter notebook, run in terminal
 from fastapi import FastAPI
 import uvicorn
-from src.get_text_data import get_wiki_page, get_random_wiki_page
+from src.input_data import get_wiki_page, get_random_wiki_page
 
 app = FastAPI()
 

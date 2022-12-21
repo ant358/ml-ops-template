@@ -4,7 +4,7 @@ import wikipedia
 wikipedia.set_lang("en")
 
 
-def get_wiki(name="Monty Python", sentences=10) -> str:
+def get_wiki_summary(name="Monty Python", sentences=10) -> str:
     """A wikipedia fetcher function
 
     Args:
@@ -21,7 +21,7 @@ def get_wiki(name="Monty Python", sentences=10) -> str:
 
 
 def get_random_wiki_page(pages=2) -> list[str]:
-    """Fetch a random wikipedia page. Defaults to 2 pages
+    """Fetch a random wikipedia page title. Defaults to 2 pages
     If a single page is returnd it is a string, if multiple pages
     are returned it is a list of strings. So we always return a
     list with 2.
@@ -60,6 +60,6 @@ def get_wiki_page(
 
 
 if __name__ == "__main__":
-    print(get_wiki())
+    print(get_wiki_summary())
 
 # %%
