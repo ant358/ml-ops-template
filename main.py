@@ -6,6 +6,7 @@ from src.input_data import get_wiki_page, get_random_wiki_page
 app = FastAPI()
 
 
+# OUTPUT
 @app.get("/")
 async def root():
     return {"message": "Template ML API to work with text data"}
@@ -25,6 +26,9 @@ async def random_wiki_page():
     page_title = get_random_wiki_page()[0]
     result = get_wiki_page(page_title)
     return {"title": page_title, "content": result}
+
+
+# INPUT
 
 
 if __name__ == "__main__":
