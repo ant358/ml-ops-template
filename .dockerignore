@@ -10,3 +10,5 @@ src/__pycache__/
 pytest.ini
 README.md
 LICENCE
+.git
+.gitignore
