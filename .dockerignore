@@ -13,4 +13,5 @@ LICENCE
 .git
 .gitignore
 .style.yapf
+.yapfignore
 
