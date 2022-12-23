@@ -1,8 +1,9 @@
-# note does not run in jupyter notebook, run in terminal
+# note does not run in jupyter notebook, run in the terminal
 from fastapi import FastAPI
 import uvicorn
 import logging
 import os
+import pathlib
 from datetime import datetime
 from src.input_data import get_wiki_page, get_random_wiki_page
 from src.control import Job_list
@@ -13,9 +14,11 @@ datestamp = datetime.now().strftime('%Y%m%d')
 container_name = os.getenv('CONTAINER_NAME')
 # append date to logfile name
 log_name = f'log-{container_name}-{datestamp}.txt'
-path = './logs/'
-log_filename = path + log_name
-print(log_filename)
+path = os.path.abspath('./logs/')
+# add path to log_name to create a pathlib object
+# required for loggin on windows and linux
+log_filename = pathlib.Path(path, log_name)
+
 # create log file if it does not exist
 if os.path.exists(log_filename) is not True:
     open(log_filename, 'w').close()
@@ -42,7 +45,7 @@ ch.setFormatter(formatter)
 logger.addHandler(file_logger)
 logger.addHandler(ch)
 # mark the run
-logger.info('Lets get started!')
+logger.info(f'Lets get started! - logginng in "{log_filename}" today')
 
 # create the FastAPI app
 app = FastAPI()
