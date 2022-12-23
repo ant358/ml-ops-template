@@ -6,7 +6,7 @@ WORKDIR $APP_HOME
 # Copy the requirements file
 COPY requirements.txt .
 # Install the Python requirements
-RUN pip install -r requirements.txt
+RUN pip install -r requirements-docker.txt
 # Copy the source code
 COPY . /app
 # expose the port

@@ -16,7 +16,12 @@ build:
 	docker build -t fastapi-wiki .
 run:
 	# deploy the code
-	docker run --rm -d -p 8080:8080 --name fastapi-wiki-container fastapi-wiki
+	docker run\
+	--rm -d -p 8080:8080\
+	--name fastapi-wiki-container\
+	--env CONTAINER_NAME=fastapi-wiki-container\
+	--env-file ./env\
+	fastapi-wiki
 deploy:
 	# customise to the cloud provider
 	build
