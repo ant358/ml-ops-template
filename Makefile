@@ -19,7 +19,7 @@ run:
 	docker run \
 		--rm -d -p 8080:8080 \
 		--name fastapi-wiki-container \
-		--env CONTAINER_NAME=fastapi-wiki-container \
+		--env CONTAINER_NAME="fastapi-wiki-container" \
 		--env-file /app/.env \
 		fastapi-wiki
 deploy:

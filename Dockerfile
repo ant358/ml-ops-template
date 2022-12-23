@@ -7,7 +7,7 @@ WORKDIR $APP_HOME
 COPY requirements-docker.txt .
 # Install the Python requirements
 RUN pip install -r requirements-docker.txt
-# Copy the source code
+# Copy the source code - see dockerignore
 COPY . /app
 # expose the port
 EXPOSE 8080
