@@ -131,4 +131,4 @@ dmypy.json
 # vscode config 
 .vscode/
 # exclude the logfiles
-logs/*.txt
+/logs/*.txt

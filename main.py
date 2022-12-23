@@ -21,6 +21,10 @@ log_filename = pathlib.Path(path, log_name)
 
 # create log file if it does not exist
 if os.path.exists(log_filename) is not True:
+    # create the logs folder if it does not exist
+    if os.path.exists(path) is not True:
+        os.mkdir(path)
+    # create the log file
     open(log_filename, 'w').close()
 
 # create logger
