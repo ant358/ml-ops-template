@@ -4,7 +4,7 @@ ENV APP_HOME=/app
 # Set the working directory
 WORKDIR $APP_HOME
 # Copy the requirements file
-COPY requirements.txt .
+COPY requirements-docker.txt .
 # Install the Python requirements
 RUN pip install -r requirements-docker.txt
 # Copy the source code
