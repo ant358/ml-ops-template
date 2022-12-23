@@ -12,3 +12,5 @@ README.md
 LICENCE
 .git
 .gitignore
+.style.yapf
+

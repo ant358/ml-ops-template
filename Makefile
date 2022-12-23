@@ -4,7 +4,7 @@ install:
 	pip install -r requirements.txt
 format:
 	# format the code
-	black *.py src/*.py tests/*.py
+	yapf *.py src/*.py tests/*.py
 lint:
 	# see flake8.ini for linting configuration
 	flake8 -v *.py src/*.py tests/*.py
