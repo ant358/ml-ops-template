@@ -58,6 +58,9 @@ Check that you can connect to the API at http://localhost:8000/docs or the endpo
 
 ## setup the environment variables
 add any the environment variables to the .env file
-add the .env file to the .gitignore file if it contains sensitive information
+if passwords are added to the .env file make sure to 
+add the .env file to the .gitignore file as it contains sensitive information
+that should not be pushed to github or gitlab. However at the moment it is used
+to transfer the container name from docker run to the python logger.
 create a container name to use when running the docker image as part of a network
 so that it can be identified in the logs
