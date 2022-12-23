@@ -1,5 +1,6 @@
 # %%
 import wikipedia
+import logging
 
 wikipedia.set_lang("en")
 
@@ -51,9 +52,9 @@ def get_wiki_page(
         page = wikipedia.page(title).content
     except wikipedia.exceptions.DisambiguationError as e:
         page = wikipedia.page(e.options[0]).content
-        print(f"DisambiguationError: {e.options}, using {e.options[0]}")
+        logging.exception(f"DisambiguationError: {e.options}, using {e.options[0]}")
     except wikipedia.exceptions.PageError as e:
-        print(f"PageError: {e}")
+        logging.exception(f"PageError: {e}")
         page = f"{title} not found"
 
     return page

@@ -1,5 +1,8 @@
 # the job list
 # %%
+import logging
+
+
 class Job_list:
     """
     A list of jobs to be executed by the container program
@@ -24,6 +27,7 @@ class Job_list:
         Initializes the job list.
         """
         self.jobs = []
+        self.logger = logging.getLogger(__name__)
 
     def add(self, job: str):
         """

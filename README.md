@@ -55,3 +55,9 @@ add a docker run step to the CI process
 
 ## Run the docker image locally
 Check that you can connect to the API at http://localhost:8000/docs or the endpoints directly from a terminal using curl http://localhost:8000/get_random_wiki_page 
+
+## setup the environment variables
+add any the environment variables to the .env file
+add the .env file to the .gitignore file if it contains sensitive information
+create a container name to use when running the docker image as part of a network
+so that it can be identified in the logs
