@@ -21,7 +21,7 @@ run:
 		--name fastapi-wiki-container \
 		-e CONTAINER_NAME \
 		--env CONTAINER_NAME="fastapi-wiki-container" \
-		--env-file /app/.env \
+		--env-file .env \
 		fastapi-wiki
 deploy:
 	# customise to the cloud provider
