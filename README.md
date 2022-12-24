@@ -63,4 +63,8 @@ add the .env file to the .gitignore file as it contains sensitive information
 that should not be pushed to github or gitlab. However at the moment it is used
 to transfer the container name from docker run to the python logger.
 create a container name to use when running the docker image as part of a network
-so that it can be identified in the logs
+so that it can be identified in the logs  
+
+## As the template is converted to each project  
+Write more tests
+
