@@ -10,7 +10,7 @@ lint:
 	flake8 -v *.py src/*.py tests/*.py
 test:
 	# see pytest.ini for test configuration
-	python -m pytest -v --cov=src --cov=main.py tests/*.py
+	python -m pytest tests/*.py
 build:
 	# build the container
 	docker build -t fastapi-wiki .
@@ -18,15 +18,14 @@ run:
 	# deploy the code
 	docker run \
 		--rm -d -p 8080:8080 \
-		--name fastapi-wiki-container \
+		--name container-name \
 		-e CONTAINER_NAME \
-		--env CONTAINER_NAME="fastapi-wiki-container" \
+		--env CONTAINER_NAME="container-name" \
 		--env-file .env \
-		fastapi-wiki
+		image-name
 deploy:
 	# customise to the cloud provider
-	build
-	run
-	push
+	# docker login
+	# docker tag image-name svgcant2022/text_ms:image-name
 
 all: install format lint test build run deploy
