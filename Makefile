@@ -13,7 +13,7 @@ test:
 	python -m pytest tests/*.py
 build:
 	# build the container
-	docker build -t fastapi-wiki .
+	docker build -t image-name .
 run:
 	# deploy the code
 	docker run \
