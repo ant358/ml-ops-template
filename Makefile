@@ -22,6 +22,9 @@ run:
 		-e CONTAINER_NAME \
 		--env CONTAINER_NAME="container-name" \
 		--env-file .env \
+		# use docker volumes to persit data from multiple containers
+		-v text_data_vol:/app/data \
+		-v text_data_logs:/app/logs \
 		image-name
 deploy:
 	# customise to the cloud provider
